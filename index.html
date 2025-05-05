@@ -1,0 +1,274 @@
+<!-- Features and Requirements:
+1. Home Page
+Structure:
+
+Header Section
+Logo (Optional)
+Navigation Bar with links to:
+Home
+Destinations
+Gallery
+Contact Us
+Main Section
+Hero Section with:
+Eye-catching title (e.g., "Explore the World with Us!")
+Image/Video background showcasing travel destinations.
+A brief description of the blog's purpose.
+An embedded map highlighting popular travel spots.
+Footer Section
+Contact Information
+Social Media Links
+Functionalities:
+
+Use HTML Meta Tags for SEO and responsiveness.
+Implement bold, italic, and underline text for emphasis.
+Add a table showcasing key destinations, popular activities, and travel costs.
+2. Destinations Page
+Structure:
+
+Header Section (Same as Home Page)
+Main Section
+List different travel destinations in a structured layout using:
+Ordered lists for must-visit places.
+Unordered lists for key travel tips.
+Include images and videos showcasing top attractions.
+Functionalities:
+
+Use internal, external, and inline styles for text styling, font changes, and layout adjustments.
+Implement CSS Selectors (element, class, and ID selectors).
+Add icons for improved visual aesthetics.
+3. Gallery Page (CSS Flexbox & Grid Layout with Media Queries)
+Structure:
+
+Header Section (Same as Home Page)
+Main Section
+Showcase a photo gallery in a CSS Grid Layout with multiple columns.
+Each image should expand or highlight on hover using pseudo-elements and pseudo-classes.
+Add flexbox styling to ensure spacing and alignment of images.
+Functionalities:
+
+Implement CSS Grid with minmax() and auto-fit/auto-fill for a flexible layout.
+Add media queries to adjust the number of columns based on screen size.
+Use CSS Combinators to style related content dynamically.
+Add a gradient overlay on images with text captions.
+4. Contact Us Page
+Structure:
+
+Header Section (Same as Home Page)
+Main Section
+Contact Form with:
+Name (text input)
+Email (email input)
+Phone Number (number input)
+Message (textarea input)
+Submit Button
+Add feedback confirmation after submission.
+Functionalities:
+
+Implement form validation to ensure required fields are filled.
+Use DOM Manipulation to:
+Display submitted data dynamically on the same page.
+Append new messages in a dedicated Feedback Section.
+Store form data in LocalStorage for persistence.
+Display saved data on page reload.
+5. Additional Features
+Dark Mode Toggle:
+
+Add a Dark Mode Toggle with CSS to switch themes dynamically.
+Scroll-to-Top Button:
+
+Implement a scroll-to-top button that appears when users scroll down.
+Responsive Design:
+
+Ensure all pages are mobile-responsive using media queries.
+Dynamic Elements Using JavaScript:
+
+Add hover effects using pseudo-elements and pseudo-classes.
+Use JavaScript Events for:
+Image zoom effects
+Interactive buttons
+Dynamic content updates.
+Page-Specific Requirements
+1. Home Page
+Must include:
+
+A Hero Section with a meaningful heading and tagline.
+An image/video background to enhance visual appeal.
+A navigation bar with functional links to:
+Home
+Destinations
+Gallery
+Contact Us
+Include an embedded map showing famous travel destinations.
+Include a table that lists:
+Top travel destinations
+Activities
+Travel costs (with subscript/superscript for currency notes).
+2. Destinations Page
+Must include:
+
+Properly structured content using:
+Ordered Lists for must-visit places.
+Unordered Lists for travel tips.
+Include at least 3 images showcasing key locations.
+Apply the Box Model for content spacing and alignment.
+3. Gallery Page
+Must include:
+
+Display at least 6 images using CSS Grid with:
+Proper spacing
+Column adjustments using minmax(), auto-fit, or auto-fill.
+Implement hover effects on images
+Ensure responsive behavior using media queries.
+4. Contact Us Page
+Must include:
+
+A Contact Form with:
+Name (Text Input)
+Email (Email Input)
+Phone Number (Number Input)
+Message (Textarea)
+Submit Button
+Use DOM Manipulation to:
+Display submitted data dynamically on the same page.
+Append feedback to a dedicated Feedback Section.
+Implement form validation to ensure required fields are filled.
+Implement LocalStorage to:
+Store form data.
+Display saved data upon page reload.
+Functional Requirements
+Dark Mode Toggle:
+
+Implement a Dark Mode Toggle using CSS classes for theme switching.
+Scroll-to-Top Button:
+
+Add a scroll-to-top button that appears when users scroll down.
+Responsive Design:
+
+Ensure all pages are mobile-friendly using media queries.
+Dynamic Elements Using JavaScript:
+
+Use JavaScript to:
+Add image zoom effects.
+Create dynamic content updates.
+Enable interactive elements with event listeners.
+Sorting Feature (Optional for Bonus):
+
+Add sorting functionality on the Destinations Page to arrange places alphabetically.
+Design & Styling Requirements
+Apply consistent color schemes, font styles, and spacing throughout the website.
+
+Use gradient backgrounds to enhance visual appeal where appropriate.
+
+Ensure all text is legible with appropriate contrast for accessibility. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore the world with our travel blog!"
+    />
+    <title>Explore the World</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <!-- Scroll-to-Top Button -->
+    <!-- <button id="scrollToTop">⬆</button> -->
+
+    <!-- Dark Mode Toggle -->
+    <!-- <button id="darkModeToggle">🌙</button> -->
+
+    <!-- Header Section -->
+    <header>
+      <nav>
+        <div class="logo-container">
+          <img
+            src="images/logo.png"
+            alt="Travel Blog Logo"
+            class="logo-image"
+          />
+        </div>
+        <div class="nav-links">
+          <!-- <h1 style="text-align: center;" class="logo">Travel Blog</h1> -->
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="">Destinations</a></li>
+            <li><a href="">Gallery</a></li>
+            <li><a href="">Contact Us</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h2><strong>Explore the World with Us!</strong></h2>
+        <p><em>Your one-stop blog for all travel destinations and tips.</em></p>
+      </div>
+      <video id="video" autoplay muted loop class="background-video">
+        <source src="images/travel.mp4" type="video/mp4" />
+      </video>
+    </section>
+
+    <!-- Main Content Section -->
+    <main class="main-content">
+      <!-- Embedded Map -->
+      <section class="map">
+        <h3>Top Travel Spots</h3>
+        <iframe
+          src="https://www.google.com/maps/embed?..."
+          width="100%"
+          height="300"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </section>
+
+      <!-- Destination Table -->
+      <section class="destination-table">
+        <h3>Top Destinations</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Destination</th>
+              <th>Popular Activities</th>
+              <th>Travel Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><u>Paris</u></td>
+              <td>City Tours, Museums</td>
+              <td>$1200<sup>*</sup></td>
+            </tr>
+            <tr>
+              <td><u>Bali</u></td>
+              <td>Beaches, Surfing</td>
+              <td>$800<sup>*</sup></td>
+            </tr>
+            <tr>
+              <td><u>Tokyo</u></td>
+              <td>Shopping, Culture</td>
+              <td>$1500<sup>*</sup></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>
+        Contact: contact@travelblog.com | Follow us on
+        <a href="#">Instagram</a>, <a href="#">Facebook</a>,
+        <a href="#">Twitter</a>
+      </p>
+    </footer>
+  </body>
+</html>
